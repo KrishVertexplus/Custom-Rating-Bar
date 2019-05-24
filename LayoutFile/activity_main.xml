@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/ratingRel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_100"
+        android:background="@drawable/no_ration_bg">
+
+        <View
+            android:id="@+id/nutrition_bar_filled"
+            android:layout_width="@dimen/margin_64"
+            android:layout_height="@dimen/margin_50"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rating_bg"
+            android:visibility="gone" />
+
+        <com.vertexplus.conciergex.utils.RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            app:rb_click_rating="true"
+            app:rb_count="0"
+            app:rb_empty="@drawable/empty"
+            app:rb_fill="@drawable/fill"
+            app:rb_max_count="5"
+            app:rb_space="@dimen/margin_20"
+            app:rb_touch_rating="true" />
+    </RelativeLayout>
+</RelativeLayout>
